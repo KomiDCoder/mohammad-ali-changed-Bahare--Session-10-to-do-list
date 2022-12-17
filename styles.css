@@ -26,7 +26,7 @@ li {
 }
 ul li button {
 }
-ul li.done {
+ul li span.done {
   text-decoration: line-through;
 }
 /* #image:hover {
@@ -167,10 +167,6 @@ li#tasks {
   border-radius: 6px;
 }
 
-li.opacity-toggle {
-  transition: all 2s linear;
-  opacity: 0;
-}
 .delete-btn {
   background: #ffecec;
   border: none;

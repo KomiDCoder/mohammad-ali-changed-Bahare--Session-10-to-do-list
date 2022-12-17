@@ -34,7 +34,9 @@
       if (inputElement.value.length > 0) {
         var taskList = document.getElementById("task-list");
         var taskItems = document.createElement("li");
-        taskItems.innerHTML = inputElement.value;
+        var spanElement = document.createElement("span");
+        spanElement.innerHTML = inputElement.value;
+        taskItems.appendChild(spanElement);
         inputElement.value = "";
         var delBtn = document.createElement("button");
         delBtn.innerHTML = "Delete";
@@ -79,9 +81,9 @@
         delBtn.addEventListener("click", fading);
 
         function Done() {
-          taskItems.classList.toggle("done");
+          spanElement.classList.toggle("done");
         }
-        taskItems.addEventListener("click", Done);
+        spanElement.addEventListener("click", Done);
       } else {
         alert("The task must not be empty");
       }
